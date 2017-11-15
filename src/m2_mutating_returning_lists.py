@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  MUTATING  and  RETURNING-NEW  LISTS.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Lanxi Wang.
+"""  # TO DO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -82,6 +82,26 @@ def run_test_doubler():
     # ------------------------------------------------------------------
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # ------------------------------------------------------------------
+    arg3 = [0, 5, 3]
+    arg4 = [0, 10, 6]
+    correct_arg3_after = [9, 2, 5, 6]
+    correct_arg4_after = [19, 4, 10, 12]
+    expected = [10, 0, 16]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 3 is:', arg3)
+    print('  Argument 4 is:', arg4)
+
+    answer = doubler(arg3, arg4)
+
+    print('AFTER the function call:')
+    print('  Argument 3 is:       ', arg3)
+    print('  Argument 3 should be:', correct_arg3_after)
+    print('  Argument 4 is:       ', arg4)
+    print('  Argument 4 should be:', correct_arg4_after)
+    print('The returned value is:       ', answer)
+    print('The returned value should be:', expected)
 
 
 def doubler(list1, list2):
