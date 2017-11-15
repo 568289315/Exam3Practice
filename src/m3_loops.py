@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # TO DO: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -109,6 +109,7 @@ def run_test_practice_problem3():
              st.SimpleTestCase(practice_problem3,
                                [0, 1, 1.414213562373],
                                [286602]),
+
              ]
     # 14th test:
     big_list = []
@@ -134,6 +135,7 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+
 
 
 def practice_problem3(start, n, threshold):
@@ -208,7 +210,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # TO DO: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
@@ -216,7 +218,21 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
-
+    if n == 0:
+        return []
+    elif threshold > math.sqrt(2):
+        a = []
+        for k in range(n):
+            a += [start+k]
+        return a
+    else:
+        b = []
+        m = start
+        while len(b) < n:
+            if math.sin(m) + math.cos(m) > threshold:
+                b += [m]
+            m = m + 1
+        return b
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
